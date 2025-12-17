@@ -1,16 +1,122 @@
-# React + Vite
+# Task Management Web — v1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto simples em React para **cadastro e listagem de tarefas**, criado com o objetivo de consolidar fundamentos essenciais da biblioteca antes de avançar para tópicos mais avançados.
 
-Currently, two official plugins are available:
+Este projeto **não busca ser completo**, mas sim didático e bem estruturado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Objetivo do projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Praticar os conceitos fundamentais do React, incluindo:
 
-## Expanding the ESLint configuration
+* Criação e reutilização de componentes
+* Uso de formulários controlados
+* Manipulação de estado com `useState`
+* Imutabilidade de dados
+* Renderização dinâmica de listas com `map`
+* Organização básica de componentes
+* Fluxo de dados via props
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Funcionalidades
+
+* Cadastro de tarefas por meio de formulário
+* Cada tarefa possui:
+
+  * título
+  * descrição
+  * prioridade
+* Exibição das tarefas em formato de lista
+* Renderização dinâmica de cada tarefa como um card
+
+### Limitações intencionais
+
+Este projeto **não inclui**:
+
+* edição de tarefas
+* exclusão de tarefas
+* persistência de dados
+* consumo de API
+* gerenciamento global de estado
+
+Essas decisões foram tomadas para manter o foco nos fundamentos.
+
+---
+
+## Conceitos praticados
+
+### Componentização
+
+A aplicação é dividida em componentes com responsabilidades claras, como:
+
+* formulário
+* campos reutilizáveis
+* lista de tarefas
+* card individual de tarefa
+
+### Estado e imutabilidade
+
+* O estado é gerenciado com `useState`
+* Novas tarefas são adicionadas criando **novos arrays**, respeitando a imutabilidade
+* Atualizações de estado disparam re-renderizações automáticas
+
+### Renderização de listas
+
+* Uso de `Array.map` para transformar dados em UI
+* Uso de `key` estável para identificação dos elementos
+
+---
+
+## Tecnologias utilizadas
+
+* React
+* Vite
+* JavaScript (ES6+)
+* CSS / Tailwind CSS *(se aplicável)*
+
+---
+
+## Como executar o projeto
+
+```bash
+# instalar dependências
+npm install
+
+# rodar o projeto
+npm run dev
+```
+
+O projeto estará disponível em `http://localhost:5173`.
+
+---
+
+## Aprendizados
+
+Este projeto serviu como base para:
+
+* entender como dados fluem em aplicações React
+* aprender quando e por que criar componentes
+* diferenciar lógica de UI
+* aplicar conceitos de programação declarativa
+
+---
+
+## Próximos passos (planejados)
+
+* validação de formulário
+* exclusão de tarefas
+* edição de tarefas
+* persistência com LocalStorage ou API
+* refatoração para hooks customizados
+
+Essas melhorias serão exploradas em versões futuras, após a consolidação dos fundamentos.
+
+---
+
+## Observação final
+
+Este projeto faz parte de um processo de aprendizado progressivo em React, priorizando clareza, organização e entendimento dos conceitos, em vez de complexidade prematura.
+
+---
